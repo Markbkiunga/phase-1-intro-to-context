@@ -15,7 +15,10 @@ function createEmployeeRecord(Array) {
 function createEmployeeRecords(Array) {
   return Array.map(createEmployeeRecord);
 }
-// let twoRows = [['moe', 'sizlak', 'barkeep', 2]];
+// let twoRows = [
+//   ['moe', 'sizlak', 'barkeep', 2],
+//   ['bartholomew', 'simpson', 'scamp', 3],
+// ];
 // console.log(createEmployeeRecords(twoRows));
 
 function createTimeInEvent(employeeRecord, dateStamp) {
@@ -28,6 +31,7 @@ function createTimeInEvent(employeeRecord, dateStamp) {
   employeeRecord.timeInEvents.push(timeInEvent);
   return employeeRecord;
 }
+
 function createTimeOutEvent(employeeRecord, dateStamp) {
   let [day, time] = dateStamp.split(' ');
   let timeOutEvent = {
@@ -38,5 +42,3 @@ function createTimeOutEvent(employeeRecord, dateStamp) {
   employeeRecord.timeOutEvents.push(timeOutEvent);
   return employeeRecord;
 }
-
-function hoursWorkedOnDate() {}
